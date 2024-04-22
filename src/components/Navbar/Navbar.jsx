@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Navbar.css'
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen]  = useState(false);
@@ -13,22 +14,22 @@ function NavBar() {
         <div>
           {isMenuOpen ? (
             <img
-              src="/public/x-icon.svg"
+              src="/src/assets/x-icon.svg"
               alt="Close Menu"
               onClick={toggleMenu}
             />
           ) : (
             <img
-              src="/public/hamburger-icon.svg"
+              src="/src/assets/hamburger-icon.svg"
               alt="Open Menu"
               onClick={toggleMenu}
             />
           )}
         </div>
-        <div className={`links ${isMenuOpen ? "open" : ""}`}>
-          <a className="link">Job Search</a>
-          <a className="link">About us</a>
-          <a className="link">Contact us</a>
+        <div className={`nav__links ${isMenuOpen ? "-open" : ""}`}>
+          <a className="nav__link">Job Search</a>
+          <a className="nav__link">About us</a>
+          <a className="nav__link">Contact us</a>
           <div>
             <a className="baseButton">Login</a>
           </div>
