@@ -1,0 +1,50 @@
+.close-menu {
+  background-image: url("/src/assets/burger-menu-icon.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.nav {
+  background-color: #f4f9ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 1rem;
+}
+
+.nav .links {
+  display: none;
+}
+
+.nav .links.open {
+  background-color: #f4f9ff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 50vw;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem;
+}
+
+.nav .links .link {
+  margin: 0 0.7rem;
+  color: #0d084d;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.nav .links .link:hover {
+  cursor: pointer;
+  color: #4a90e2;
+}
+
+.nav .links .baseButton {
+  margin: 0.5rem 0;
+}
