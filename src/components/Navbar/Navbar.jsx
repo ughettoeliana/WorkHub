@@ -26,7 +26,7 @@ function NavBar() {
             />
           )}
         </div>
-        <div className={`nav__links ${isMenuOpen ? "-open" : ""}`}>
+        <div className={`nav__links ${isMenuOpen ? "nav__links--open" : ""}`}>
           <a className="nav__link">Job Search</a>
           <a className="nav__link">About us</a>
           <a className="nav__link">Contact us</a>
