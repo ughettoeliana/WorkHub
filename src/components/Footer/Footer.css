@@ -18,37 +18,22 @@
   .footer__logo-image {
     width: 100%;
   }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .footer__link {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+  }
+
+  .footer__link--container{
+    margin: 1rem 0.5rem;
+  }
+
 }
-
-
-/* .footer {
-
-}
-
-.footer .logos-container {
-
-}
-
-.footer .logo-container {
-  max-width: 150px;
-}
-
-.footer .logo-container img {
-}
-
-.footer .links {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.footer .links .link {
-  display: flex;
-  flex-direction: column;
-  margin: 0.3rem;
-}
-
-.footer .links div {
-  margin: 1rem 0.5rem;
-} */

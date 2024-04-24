@@ -14,21 +14,21 @@ function Footer() {
         <div className="footer__logo">
           <img
             className="footer__logo-image"
-            src="/public/app_store.svg"
+            src="/src/assets/app_store.svg"
             alt="app store's logo"
           />
         </div>
         <div className="footer__logo">
           <img
             className="footer__logo-image"
-            src="/public/google_play.svg"
+            src="/src/assets/google_play.svg"
             alt="google play store's logo"
           />
         </div>
       </div>
       <div className="footer__links">
         <h5 className="footer__links-title">Company</h5>
-        <div>
+        <div className="footer__link-container">
           <a className="footer__link">About us</a>
           <a className="footer__link">Contact us</a>
           <a className="footer__link">Blog</a>
@@ -36,7 +36,7 @@ function Footer() {
       </div>
       <div className="footer__links">
         <h5 className="footer__links-title">Support</h5>
-        <div>
+        <div className="footer__link-container">
           <a className="footer__link">Faqs</a>
           <a className="footer__link">Privacy Policy</a>
           <a className="footer__link">Terms & Condition</a>
@@ -44,7 +44,7 @@ function Footer() {
       </div>
       <div className="footer__links">
         <h5 className="footer__links-title">Follow us</h5>
-        <div>
+        <div className="footer__link-container">
           <a className="footer__link">Instagram</a>
           <a className="footer__link">Facebook</a>
         </div>

@@ -20,7 +20,7 @@ function Home() {
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/User/Male.png"
+                src="/src/assets/Male.png"
                 className="img"
                 alt="user-profile"
               />
@@ -31,14 +31,14 @@ function Home() {
               <p className="userHourlyRate">$25 hr</p>
               <div className="userRatings">
                 <p>4.5/5</p>
-                <img src="/src/assets/User/star-icon.svg" />
+                <img src="/src/assets/star-icon.svg" />
               </div>
             </div>
           </div>
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/User/Male.png"
+                src="/src/assets/Male.png"
                 className="img"
                 alt="user-profile"
               />
@@ -49,14 +49,14 @@ function Home() {
               <p className="userHourlyRate">$25 hr</p>
               <div className="userRatings">
                 <p>4.5/5</p>
-                <img src="/src/assets/User/star-icon.svg" />
+                <img src="/src/assets/star-icon.svg" />
               </div>
             </div>
           </div>
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/User/Male.png"
+                src="/src/assets/Male.png"
                 className="img"
                 alt="user-profile"
               />
@@ -67,14 +67,14 @@ function Home() {
               <p className="userHourlyRate">$25 hr</p>
               <div className="userRatings">
                 <p>4.5/5</p>
-                <img src="/src/assets/User/star-icon.svg" />
-              </div>{" "}
+                <img src="/src/assets/star-icon.svg" />
+              </div>
             </div>
           </div>
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/User/Male.png"
+                src="/src/assets/Male.png"
                 className="img"
                 alt="user-profile"
               />
@@ -85,7 +85,7 @@ function Home() {
               <p className="userHourlyRate">$25 hr</p>
               <div className="userRatings">
                 <p>4.5/5</p>
-                <img src="/src/assets/User/star-icon.svg" />
+                <img src="/src/assets/star-icon.svg" />
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ function Home() {
         <div className="promotion-banner">
           <div className="person-icon-container">
             <img
-              src="/src/assets/User/animation-person.svg"
+              src="/src/assets/animation-person.svg"
               alt="an animation of a male person"
             />
           </div>
