@@ -1,0 +1,119 @@
+/* BANNER STYLES */
+
+.banner {
+  background-color: #f4f9ff;
+  background-image: url("/src/assets/colourful-cirles.svg"),
+    url("/src/assets/pattern.svg");
+  background-position: center, center top;
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.banner > h1,
+.banner > p {
+  text-align: center;
+  color: #0d084d;
+  padding: 1rem 0;
+}
+
+.banner h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.banner p {
+  max-width: 500px;
+  font-size: 30px;
+}
+
+/* CONTENT STYLES */
+
+.content {
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.content h2 {
+  padding-bottom: 1rem;
+}
+
+.content h3 {
+  margin: 40px 0 20px;
+}
+
+.content .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .cards .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f4f9ff;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #85afde;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.content .cards .card .img-container {
+  margin-left: 20px;
+  max-width: 100px;
+}
+
+.content .cards .card .img-container img{
+  width: 100%;
+}
+
+.content .cards .userData {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.content .cards .card .userName {
+  color: #4a90e2;
+}
+.content .cards .card .userData .userHourlyRate {
+  color: #969696;
+  margin: 0;
+}
+
+.content .cards .card .userRatings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60px;
+}
+
+.promotion-banner {
+  display: flex;
+  align-items: center;
+  background-color: #4a90e2;
+  color: #f4f9ff;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.promotion-banner .promotion-text {
+  max-width: 500px;
+}
+
+.promotion-banner .person-icon-container {
+  margin: 1rem;
+}
+
+.promotion-banner .person-icon-container img {
+  width: 100%;
+}

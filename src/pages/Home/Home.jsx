@@ -1,3 +1,5 @@
+import './Home.css'
+
 function Home() {
   return (
     <div className="container">
@@ -20,7 +22,7 @@ function Home() {
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/Male.png"
+                src="/src/assets/Male.jpeg"
                 className="img"
                 alt="user-profile"
               />
@@ -38,7 +40,7 @@ function Home() {
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/Male.png"
+                src="/src/assets/Male.jpeg"
                 className="img"
                 alt="user-profile"
               />
@@ -56,7 +58,7 @@ function Home() {
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/Male.png"
+                src="/src/assets/Male.jpeg"
                 className="img"
                 alt="user-profile"
               />
@@ -74,7 +76,7 @@ function Home() {
           <div className="card">
             <div className="img-container">
               <img
-                src="/src/assets/Male.png"
+                src="/src/assets/Male.jpeg"
                 className="img"
                 alt="user-profile"
               />
