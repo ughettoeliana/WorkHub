@@ -1,4 +1,4 @@
-import './Home.css'
+import "./Home.css";
 
 function Home() {
   return (
@@ -10,13 +10,15 @@ function Home() {
       </div>
       <section className="content">
         <h2>How does WorkHub works?</h2>
-        <p>
-          WorkHub is a platform that uses detailed user profiles to match people
-          with job opportunities or clients. Our top priority is honesty and
-          integrity, so we strive to make every interaction on our platform
-          genuine and trustworthy. Feel confident and safe using our platform,
-          knowing that everything you see is real.
-        </p>
+        <div className="content__text">
+          <p>
+            WorkHub is a platform that uses detailed user profiles to match
+            people with job opportunities or clients. Our top priority is
+            honesty and integrity, so we strive to make every interaction on our
+            platform genuine and trustworthy. Feel confident and safe using our
+            platform, knowing that everything you see is real.
+          </p>
+        </div>
         <h3>Most popular profiles</h3>
         <div className="cards">
           <div className="card">
