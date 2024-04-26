@@ -31,7 +31,7 @@ function NavBar() {
           <a className="nav__link">About us</a>
           <a className="nav__link">Contact us</a>
           <div>
-            <a className="baseButton">Login</a>
+            <a className="base-button">Login</a>
           </div>
         </div>
         <div><img src="/public/logo.svg" alt="" /></div>

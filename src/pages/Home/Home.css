@@ -53,30 +53,47 @@
   margin: 40px 0 20px;
 }
 
-.promotion-banner {
+.promotion__banner {
   background-image: url("/src/assets/colourful-cirles.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  background-color: #4a90e2;
   color: #f4f9ff;
   font-size: 20px;
   border-radius: 10px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
-.promotion-banner .promotion-text {
+.promotion__banner-1 {
+  background-color: #4a90e2;
+}
+
+.promotion__banner .promotion__banner-text {
   width: 300px;
   margin: 1rem;
 }
 
-.promotion-banner .person-icon-container {
+.promotion__banner .person-icon-container {
   margin: 1rem;
 }
 
-.promotion-banner .person-icon-container img {
+.promotion__banner .person-icon-container img {
   width: 100%;
+}
+
+.display-none {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .promotion__banner-2 {
+    background-color: #0d084d;
+
+    .base-button{
+      background-color: #4a90e2;
+    }
+  }
 }

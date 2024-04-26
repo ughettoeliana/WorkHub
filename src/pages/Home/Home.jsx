@@ -1,12 +1,30 @@
+import { useEffect, useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [isWideScreen, setIsWideScreen] = useState(
+    window.matchMedia("(min-width: 600px)").matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 600px)");
+    const handler = (event) => {
+      setIsWideScreen(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handler);
+    };
+  }, []);
+
   return (
     <div className="container">
       <div className="banner">
         <h1>WorkHub</h1>
         <p>The place where talents and opportunities come together</p>
-        <a className="baseButton">Getting started</a>
+        <a className="base-button">Getting started</a>
       </div>
       <section className="content">
         <h2>How does WorkHub works?</h2>
@@ -95,16 +113,28 @@ function Home() {
           </div>
         </div>
         <h2>Join us</h2>
-        <div className="promotion-banner">
+        <div className="promotion__banner promotion__banner-1">
           <div className="person-icon-container">
             <img
-              src="/src/assets/animation-person.svg"
+              src="/src/assets/male-animation.svg"
               alt="an animation of a male person"
             />
           </div>
-          <div className="promotion-text">
+          <div className="promotion__banner-text">
             <p>Create your profile and start your job searching journey </p>
-            <a className="baseButton bg-Darkblue">Create profile</a>
+            <a className="base-button bg-Darkblue">Create profile</a>
+          </div>
+        </div>
+        <div className={isWideScreen ? 'promotion__banner promotion__banner-2' : "display-none"}>
+          <div className="person-icon-container">
+            <img
+              src="/src/assets/female-animation.svg"
+              alt="an animation of a male person"
+            />
+          </div>
+          <div className="promotion__banner-text">
+            <p>Create your profile and start your job searching journey </p>
+            <a className="base-button bg-Darkblue">Create profile</a>
           </div>
         </div>
       </section>
