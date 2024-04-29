@@ -6,6 +6,11 @@
   display: none;
 }
 
+.nav-container{
+  background-color: #f4f9ff;
+  border-bottom: solid 1px #4a90e2;
+}
+
 .nav {
   background-color: #f4f9ff;
   display: flex;
@@ -13,7 +18,9 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 
   .nav__links {
     display: none;
@@ -28,7 +35,7 @@
     bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     padding: 1rem;
   }
 
@@ -46,5 +53,25 @@
 
   &__links .base-button {
     margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .display-none {
+    display: none;
+  }
+
+  .nav {
+    .nav__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .nav__link{
+      padding: 0 1rem;
+    }
+
   }
 }
