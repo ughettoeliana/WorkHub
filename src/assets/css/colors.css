@@ -1,0 +1,44 @@
+.wh-color-primary {
+  color: var(--wh-color-primary);
+}
+
+.wh-color-secondary {
+  color: var(--wh-color-secondary);
+}
+
+.wh-color-tertiary {
+  color: var(--wh-color-tertiary);
+}
+
+.wh-color-gray-0 {
+  color: var(--wh-color-gray-0);
+}
+
+.wh-color-gray-1 {
+  color: var(--wh-color-gray-1);
+}
+
+.wh-color-gray-2 {
+  color: var(--wh-color-gray-2);
+}
+
+.wh-color-gray-3 {
+  color: var(--wh-color-gray-3);
+}
+
+.wh-color-gray-4 {
+  color: var(--wh-color-gray-4);
+}
+
+.wh-color-gray-5 {
+  color: var(--wh-color-gray-5);
+}
+.wh-bg-primary {
+  background-color: var(--wh-color-secondary);
+}
+.wh-bg-secondary {
+  background-color: var(--wh-color-primary);
+}
+.wh-bg-tertiary {
+  background-color: var(--wh-color-tertiary);
+}

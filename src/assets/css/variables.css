@@ -1,0 +1,29 @@
+:root {
+  --wh-base-lh: 8px;
+  --lh-quarter: calc(var(--wh-base-lh) / 4);
+  --lh-half: calc(var(--wh-base-lh) / 2);
+  --lh: var(--wh-base-lh);
+  --lh-2: calc(var(--wh-base-lh) * 2);
+  --lh-3: calc(var(--wh-base-lh) * 3);
+  --lh-4: calc(var(--wh-base-lh) * 4);
+  --lh-5: calc(var(--wh-base-lh) * 5);
+  --lh-6: calc(var(--wh-base-lh) * 6);
+
+  --fs-xxs: 10px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-xxl: 22px;
+
+  --wh-color-primary: #4a90e2;
+  --wh-color-secondary: #0d084d;
+  --wh-color-tertiary: #f4f9ff;
+  --wh-color-gray-0: #000000;
+  --wh-color-gray-1: #333333;
+  --wh-color-gray-2: #666666;
+  --wh-color-gray-3: #999999;
+  --wh-color-gray-4: #bbbbbb;
+  --wh-color-gray-5: #ffffff;
+}

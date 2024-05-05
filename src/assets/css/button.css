@@ -1,0 +1,22 @@
+.wh-button {
+  display: block;
+  padding: var(--lh) var(--lh-2);
+  border-radius: 10px;
+}
+
+.wh-button--primary {
+  color: var(--wh-color-gray-5);
+  background-color: var(--wh-color-primary);
+}
+
+.wh-button--secondary {
+  color: var(--wh-color-gray-5);
+  background-color: var(--wh-color-tertiary);
+}
+
+.wh-button--sm {
+  padding: var(--lh-quarter) var(--lh);
+}
+.wh-button--lg {
+  padding: var(--lh-half) var(--lh-2);
+}
