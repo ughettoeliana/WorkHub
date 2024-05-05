@@ -20,7 +20,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="container">
+    <div>
       <div className="banner">
         <h1>WorkHub</h1>
         <p>The place where talents and opportunities come together</p>
