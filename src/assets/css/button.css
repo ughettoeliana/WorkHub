@@ -1,7 +1,9 @@
 .wh-button {
   display: block;
-  padding: var(--lh) var(--lh-2);
+  padding: var(--lh-half) var(--lh);
   border-radius: 10px;
+  border: none;
+  font-size: var(--lh);
 }
 
 .wh-button--primary {
