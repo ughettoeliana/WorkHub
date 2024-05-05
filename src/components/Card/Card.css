@@ -1,0 +1,53 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f4f9ff;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #85afde;
+  padding: 0 20px;
+  margin: 10px 10px;
+}
+
+.cards {
+  .card {
+    .img-container {
+      margin-left: 20px;
+      max-width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.cards .card .img-container .cards .userData {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cards .card .userName {
+  color: #4a90e2;
+}
+.cards .card .userData .userHourlyRate {
+  color: #969696;
+  margin: 0;
+}
+
+.cards .card .userRatings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60px;
+}

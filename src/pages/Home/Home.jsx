@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
+import Card from "../../components/Card";
 
 function Home() {
   const [isWideScreen, setIsWideScreen] = useState(
@@ -38,80 +39,9 @@ function Home() {
           </p>
         </div>
         <h3>Most popular profiles</h3>
-        <div className="cards">
-          <div className="card">
-            <div className="img-container">
-              <img
-                src="/src/assets/Male.jpeg"
-                className="img"
-                alt="user-profile"
-              />
-            </div>
-            <div className="userData">
-              <h4 className="userName">Kapil Ojha</h4>
-              <p className="userRol">UX/UI Designer</p>
-              <p className="userHourlyRate">$25 hr</p>
-              <div className="userRatings">
-                <p>4.5/5</p>
-                <img src="/src/assets/star-icon.svg" />
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="img-container">
-              <img
-                src="/src/assets/Male.jpeg"
-                className="img"
-                alt="user-profile"
-              />
-            </div>
-            <div className="userData">
-              <h4 className="userName">Kapil Ojha</h4>
-              <p className="userRol">UX/UI Designer</p>
-              <p className="userHourlyRate">$25 hr</p>
-              <div className="userRatings">
-                <p>4.5/5</p>
-                <img src="/src/assets/star-icon.svg" />
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="img-container">
-              <img
-                src="/src/assets/Male.jpeg"
-                className="img"
-                alt="user-profile"
-              />
-            </div>
-            <div className="userData">
-              <h4 className="userName">Kapil Ojha</h4>
-              <p className="userRol">UX/UI Designer</p>
-              <p className="userHourlyRate">$25 hr</p>
-              <div className="userRatings">
-                <p>4.5/5</p>
-                <img src="/src/assets/star-icon.svg" />
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="img-container">
-              <img
-                src="/src/assets/Male.jpeg"
-                className="img"
-                alt="user-profile"
-              />
-            </div>
-            <div className="userData">
-              <h4 className="userName">Kapil Ojha</h4>
-              <p className="userRol">UX/UI Designer</p>
-              <p className="userHourlyRate">$25 hr</p>
-              <div className="userRatings">
-                <p>4.5/5</p>
-                <img src="/src/assets/star-icon.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <Card />
+        
         <h2>Join us</h2>
         <div className="promotion__container">
           <div className="promotion__banner promotion__banner-1">
