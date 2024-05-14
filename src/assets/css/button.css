@@ -1,9 +1,11 @@
 .wh-button {
   display: block;
   padding: var(--lh-half) var(--lh);
-  border-radius: 10px;
+  border-radius: 18px;
   border: none;
   font-size: var(--lh);
+  text-align: center;
+  text-decoration: none;
 }
 
 .wh-button--primary {
@@ -13,12 +15,15 @@
 
 .wh-button--secondary {
   color: var(--wh-color-gray-5);
-  background-color: var(--wh-color-tertiary);
+  background-color: var(--wh-color-secondary);
 }
 
 .wh-button--sm {
-  padding: var(--lh-quarter) var(--lh);
+  font-size: var(--fs-sm);
+  padding: var(--lh-quarter) var(--lh-half);
 }
+
 .wh-button--lg {
+  font-size: var(--fs-lg);
   padding: var(--lh-half) var(--lh-2);
 }

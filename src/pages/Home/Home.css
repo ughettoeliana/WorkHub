@@ -1,6 +1,6 @@
 /* BANNER STYLES */
 
-.banner {
+.home__banner {
   background-color: #f4f9ff;
   background-image: url("/src/assets/colourful-cirles.svg"),
     url("/src/assets/pattern.svg");
@@ -13,25 +13,27 @@
   justify-content: center;
   align-items: center;
   padding: 2em;
+
+  .home__header {
+    font-weight: 600;
+    color: var(--wh-color-secondary);
+  }
+  .home__subheader {
+    padding: var(--lh);
+    text-align: center;
+    color: var(--wh-color-secondary);
+  }
 }
 
-.banner > h1,
-.banner > p {
-  text-align: center;
-  color: #0d084d;
-}
+.home__section {
+  padding: var(--lh);
 
-.banner h1 {
-  font-size: 40px;
-  font-weight: 600;
+  .home__section-description {
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+  }
 }
-
-.banner p {
-  max-width: 500px;
-  font-size: 30px;
-}
-
-/* CONTENT STYLES */
 
 .content {
   margin: 0 auto;
@@ -108,7 +110,7 @@
     max-width: 1000px;
     margin: 0 auto;
 
-    .promotion__banner{
+    .promotion__banner {
       margin: 0 1rem;
     }
   }
