@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ function NavBar() {
             <a className="nav__link">About us</a>
             <a className="nav__link">Contact us</a>
             <div>
-              <a className="base-button">Login</a>
+              <Link  to="/login" className="wh-button wh-button--primary">Login</Link>
             </div>
           </div>
           <div className={isWideScreen ? "display-none" : ""}>
