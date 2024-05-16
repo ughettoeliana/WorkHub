@@ -14,14 +14,14 @@ function Footer() {
         <div className="footer__logo">
           <img
             className="footer__logo-image"
-            src="/src/assets/app_store.svg"
+            src="/src/assets/svg/app_store.svg"
             alt="app store's logo"
           />
         </div>
         <div className="footer__logo">
           <img
             className="footer__logo-image"
-            src="/src/assets/google_play.svg"
+            src="/src/assets/svg/google_play.svg"
             alt="google play store's logo"
           />
         </div>

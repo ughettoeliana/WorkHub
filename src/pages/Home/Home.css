@@ -2,8 +2,8 @@
 
 .home__banner {
   background-color: #f4f9ff;
-  background-image: url("/src/assets/colourful-cirles.svg"),
-    url("/src/assets/pattern.svg");
+  background-image: url("/src/assets/svg/colourful-cirles.svg"),
+    url("/src/assets/svg/pattern.svg");
   background-position: center, center top;
   background-repeat: no-repeat;
   background-size: contain, cover;

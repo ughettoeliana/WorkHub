@@ -1,10 +1,10 @@
-.close-menu {
-  background-image: url("/src/assets/burger-menu-icon.svg");
+/* .close-menu {
+  background-image: url("/src/assets/svg/hamburger-icon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   display: none;
-}
+} */
 
 .nav-container{
   background-color: #f4f9ff;

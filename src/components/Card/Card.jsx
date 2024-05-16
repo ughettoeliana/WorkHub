@@ -13,13 +13,13 @@ function Card() {
           <p className="userHourlyRate">$25 hr</p>
           <div className="userRatings">
             <p>4.5/5</p>
-            <img src="/src/assets/star-icon.svg" />
+            <img src="/src/assets/svg/star-icon.svg" />
           </div>
         </div>
       </div>
       <div className="card">
         <div className="img-container">
-          <img src="/src/assets/Male.jpeg" className="img" alt="user-profile" />
+          <img src="/src/assets/imgs/Male.jpeg" className="img" alt="user-profile" />
         </div>
         <div className="userData">
           <h4 className="userName">Kapil Ojha</h4>
@@ -27,13 +27,13 @@ function Card() {
           <p className="userHourlyRate">$25 hr</p>
           <div className="userRatings">
             <p>4.5/5</p>
-            <img src="/src/assets/star-icon.svg" />
+            <img src="/src/assets/svg/star-icon.svg" />
           </div>
         </div>
       </div>
       <div className="card">
         <div className="img-container">
-          <img src="/src/assets/Male.jpeg" className="img" alt="user-profile" />
+          <img src="/src/assets/imgs/Male.jpeg" className="img" alt="user-profile" />
         </div>
         <div className="userData">
           <h4 className="userName">Kapil Ojha</h4>
@@ -41,13 +41,13 @@ function Card() {
           <p className="userHourlyRate">$25 hr</p>
           <div className="userRatings">
             <p>4.5/5</p>
-            <img src="/src/assets/star-icon.svg" />
+            <img src="/src/assets/svg/star-icon.svg" />
           </div>
         </div>
       </div>
       <div className="card">
         <div className="img-container">
-          <img src="/src/assets/Male.jpeg" className="img" alt="user-profile" />
+          <img src="/src/assets/imgs/Male.jpeg" className="img" alt="user-profile" />
         </div>
         <div className="userData">
           <h4 className="userName">Kapil Ojha</h4>
@@ -55,7 +55,7 @@ function Card() {
           <p className="userHourlyRate">$25 hr</p>
           <div className="userRatings">
             <p>4.5/5</p>
-            <img src="/src/assets/star-icon.svg" />
+            <img src="/src/assets/svg/star-icon.svg" />
           </div>
         </div>
       </div>
