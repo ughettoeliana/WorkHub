@@ -1,0 +1,18 @@
+.message__container{
+background-color: #F5F5F5;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+margin-bottom: var(--lh);
+padding: var(--lh-quarter);
+}
+
+.message__text{
+  color: #cc0000;
+  padding-left: 10px;
+}
+
+.message__icon-container{
+  width: 25px;
+}
