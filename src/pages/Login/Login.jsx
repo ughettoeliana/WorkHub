@@ -1,10 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import { login } from "../../services/auth";
+import { useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+    await login({email, password});
+    navigate('/', {replace: true})
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="login">
-      <form className="login__form">
+      <form className="login__form" action="#" onSubmit={handleFormSubmit}>
         <h1 className="login__title"> Login</h1>
         <label className="login__form-label" htmlFor="email">
           Email:
@@ -14,6 +38,8 @@ export default function Login() {
           type="email"
           name="email"
           id="email"
+          onChange={handleEmailChange}
+          value={email}
           placeholder="john.doe@example.com"
         />
         <label className="login__form-label" htmlFor="password" >
@@ -24,6 +50,8 @@ export default function Login() {
           type="password"
           name="password"
           id="password"
+          onChange={handlePasswordChange}
+          value={password}
           placeholder="myPassword"
         />
         <button className="wh-button wh-button--primary" type="submit">

@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { register } from "../../services/auth";
+import Message from "../../components/Message/Message";
 
 export default function Register() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState();
+
   const navigate = useNavigate();
 
   const handleFullNameChange = (e) => {
@@ -20,16 +24,31 @@ export default function Register() {
     setPassword(e.target.value);
   };
 
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  function validatePassword() {
+    if (password === confirmPassword) {
+      return password;
+    } else {
+      setMessage({
+        message: "Las contraseñas no coinciden",
+        type: "error",
+      });
+      return null;
+    }
+  }
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await createAccount(fullName ,email, password);
-      const loggedUser = await login(email, password);
-      localStorage.setItem("token", loggedUser.token);
-      navigate("/services", { replace: true });
-    } catch (error) {
-      console.log(error);
+    const validPassword = validatePassword();
+    if (!validPassword) {
+      return;
     }
+
+    await register({ fullName, email, validPassword });
+    navigate("/", { replace: true });
   };
 
   return (
@@ -46,6 +65,7 @@ export default function Register() {
           id="fullName"
           onChange={handleFullNameChange}
           value={fullName}
+          required
           placeholder="John Doe"
         />
         <label className="login__form-label" htmlFor="email">
@@ -58,6 +78,7 @@ export default function Register() {
           id="email"
           onChange={handleEmailChange}
           value={email}
+          required
           placeholder="john.doe@example.com"
         />
         <label className="login__form-label" htmlFor="password">
@@ -70,6 +91,7 @@ export default function Register() {
           id="password"
           onChange={handlePasswordChange}
           value={password}
+          required
           placeholder="myPassword"
         />
         <label className="login__form-label" htmlFor="password">
@@ -80,8 +102,12 @@ export default function Register() {
           type="password"
           name="confirm-password"
           id="confirm-password"
+          onChange={handleConfirmPasswordChange}
+          value={confirmPassword}
+          required
           placeholder="confirmMyPassword"
         />
+        {message && <Message message={message} />}
         <button className="wh-button wh-button--primary" type="submit">
           Register
         </button>
