@@ -1,4 +1,4 @@
-.cards {
+/* .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,36 +18,51 @@
   border: 1px solid #85afde;
   padding: 0 20px;
   margin: 10px 10px;
-}
+} */
 
 .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
   .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f4f9ff;
+    text-align: left;
+    border-radius: 10px;
+    border: 1px solid #85afde;
+    padding: var(--lh) var(--lh);
+    margin: var(--lh-half) var(--lh-half);
+
     .img-container {
-      margin-left: 20px;
-      max-width: 100px;
+      margin-right: var(--lh);
+      max-width: 150px;
+      
       img {
         width: 100%;
       }
     }
+
+    .userName {
+      color: #4a90e2;
+    }
+
+    .userHourlyRate {
+      color: #969696;
+      margin: 0;
+    }
+
+    .userRatings {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 60px;
+    }
   }
-}
-
-.cards .card .img-container .cards .userData {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.cards .card .userName {
-  color: #4a90e2;
-}
-.cards .card .userData .userHourlyRate {
-  color: #969696;
-  margin: 0;
-}
-
-.cards .card .userRatings {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 60px;
 }

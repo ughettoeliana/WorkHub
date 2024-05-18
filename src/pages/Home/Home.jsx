@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
 import Card from "../../components/Card";
+import { getUsers } from "../../services/user";
 
 function Home() {
+  const [users, setUsers] = useState([]);
   const [isWideScreen, setIsWideScreen] = useState(
     window.matchMedia("(min-width: 600px)").matches
   );
@@ -18,6 +20,17 @@ function Home() {
     return () => {
       mediaQuery.removeEventListener("change", handler);
     };
+  }, []);
+
+
+  useEffect(() => {
+    async function fetchData() {
+      const usersRef = await getUsers();
+      console.log("usersRef", usersRef);
+      setUsers(usersRef);
+    }
+
+    fetchData();
   }, []);
 
   return (
@@ -40,14 +53,15 @@ function Home() {
         </p>
         <h2 className="wh-text-center wh-fs-xl">Most popular profiles</h2>
 
-        <Card />
-
+        {users.map((user) => (
+        <Card key={user.id} user={user} />
+      ))}
         <h2 className="wh-text-center wh-fs-xl">Join us</h2>
         <div className="promotion__container">
           <div className="promotion__banner promotion__banner-1">
             <div className="person-icon-container">
               <img
-                src="/src/assets/male-animation.svg"
+                src="/src/assets/svg/male-animation.svg"
                 alt="an animation of a male person"
               />
             </div>
@@ -65,7 +79,7 @@ function Home() {
           >
             <div className="person-icon-container">
               <img
-                src="/src/assets/female-animation.svg"
+                src="/src/assets/svg/female-animation.svg"
                 alt="an animation of a male person"
               />
             </div>
