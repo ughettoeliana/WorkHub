@@ -13,7 +13,7 @@ function NavBar() {
     window.matchMedia("(min-width: 600px)").matches
   );
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,7 +43,7 @@ function NavBar() {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
-        navigate('/login')
+        navigate("/login");
         console.log("User sign out");
       })
       .catch((error) => console.log(error));
@@ -54,19 +54,26 @@ function NavBar() {
       <div className="nav-container">
         <nav className="nav">
           <div>
-            <img src="/public/logo.svg" alt="" />
+            <Link to="/">
+              <img src="/public/logo-mobile.svg" alt="workhub logo" />
+            </Link>
           </div>
           <div className={`nav__links ${isMenuOpen ? "nav__links--open" : ""}`}>
-            <a className="nav__link">Job Search</a>
+            <Link className="nav__link" to="/profiles">
+              Search
+            </Link>
             <a className="nav__link">About us</a>
             <a className="nav__link">Contact us</a>
             {authUser !== null ? (
-              <Link
-                onClick={handleSignOut}
-                className="wh-button wh-button--primary"
-              >
-                Sign Out
-              </Link>
+              <>
+                <Link to='/'>My profile</Link>
+                <Link
+                  onClick={handleSignOut}
+                  className="wh-button wh-button--primary"
+                >
+                  Sign Out
+                </Link>
+              </>
             ) : (
               <Link to="/login" className="wh-button wh-button--primary">
                 Log in

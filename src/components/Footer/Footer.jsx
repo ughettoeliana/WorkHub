@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer__logo">
           <img
             className="footer__logo-image"
-            src="/public/fullSizeLogo.svg"
+            src="/public/logo-desktop.svg"
             alt="brand's logo"
           />
         </div>
