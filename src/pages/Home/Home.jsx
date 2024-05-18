@@ -22,7 +22,6 @@ function Home() {
     };
   }, []);
 
-
   useEffect(() => {
     async function fetchData() {
       const usersRef = await getUsers();
@@ -43,7 +42,9 @@ function Home() {
         <a className="wh-button wh-button--primary">Getting started</a>
       </div>
       <section className="home__section">
-        <h2 className="home__section-header wh-text-center">How does WorkHub works?</h2>
+        <h2 className="home__section-header wh-text-center">
+          How does WorkHub works?
+        </h2>
         <p className="home__section-description">
           WorkHub is a platform that uses detailed user profiles to match people
           with job opportunities or clients. Our top priority is honesty and
@@ -53,9 +54,12 @@ function Home() {
         </p>
         <h2 className="wh-text-center wh-fs-xl">Most popular profiles</h2>
 
-        {users.map((user) => (
-        <Card key={user.id} user={user} />
-      ))}
+        <div className="cards">
+          {users.map((user) => (
+            <Card key={user.id} user={user} />
+          ))}
+        </div>
+
         <h2 className="wh-text-center wh-fs-xl">Join us</h2>
         <div className="promotion__container">
           <div className="promotion__banner promotion__banner-1">

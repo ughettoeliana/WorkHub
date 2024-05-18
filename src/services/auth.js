@@ -57,7 +57,6 @@ export const listenToAuthChanges = (auth, setAuthUser) => {
   return onAuthStateChanged(auth, (user) => {
     if (user) {
       setAuthUser(user);
-      console.log("authUser:", user);
     } else {
       setAuthUser(null);
     }
