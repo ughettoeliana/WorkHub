@@ -4,7 +4,8 @@ import { register } from "../../services/auth";
 import Message from "../../components/Message/Message";
 
 export default function Register() {
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -12,8 +13,12 @@ export default function Register() {
 
   const navigate = useNavigate();
 
-  const handleFullNameChange = (e) => {
-    setFullName(e.target.value);
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
   };
 
   const handleEmailChange = (e) => {
@@ -30,10 +35,17 @@ export default function Register() {
 
   function validatePassword() {
     if (password === confirmPassword) {
-      return password;
+      if (password < 6) {
+        setMessage({
+          message: "The password has to be at least 6 characters",
+          type: "error",
+        });
+      } else {
+        return password;
+      }
     } else {
       setMessage({
-        message: "Las contraseñas no coinciden",
+        message: "The passwords don't match",
         type: "error",
       });
       return null;
@@ -46,8 +58,7 @@ export default function Register() {
     if (!validPassword) {
       return;
     }
-
-    await register({ fullName, email, validPassword });
+    await register({ firstName, lastName, email, validPassword });
     navigate("/", { replace: true });
   };
 
@@ -55,18 +66,31 @@ export default function Register() {
     <div className="login">
       <form className="login__form" action="#" onSubmit={handleFormSubmit}>
         <h1 className="login__title">Register</h1>
-        <label className="login__form-label" htmlFor="fullName">
-          Full name:
+        <label className="login__form-label" htmlFor="firstName">
+          First Name:
         </label>
         <input
           className="login__form-input"
           type="text"
-          name="fullName"
-          id="fullName"
-          onChange={handleFullNameChange}
-          value={fullName}
+          name="firstName"
+          id="firstName"
+          onChange={handleFirstNameChange}
+          value={firstName}
           required
-          placeholder="John Doe"
+          placeholder="John"
+        />
+        <label className="login__form-label" htmlFor="lastName">
+          Last Name:
+        </label>
+        <input
+          className="login__form-input"
+          type="text"
+          name="lastName"
+          id="lastName"
+          onChange={handleLastNameChange}
+          value={lastName}
+          required
+          placeholder="Doe"
         />
         <label className="login__form-label" htmlFor="email">
           Email:
@@ -112,7 +136,7 @@ export default function Register() {
           Register
         </button>
         <p className="wh-text-center">
-          Already have an account?{" "}
+          Already have an account?
           <Link to="/login" className="wh-text-highlight">
             Login
           </Link>

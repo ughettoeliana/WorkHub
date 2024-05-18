@@ -22,28 +22,35 @@ export async function login({ email, password }) {
     });
 }
 
-export async function register({ fullName, email, password }) {
+export async function register({ firstName, lastName, email, validPassword }) {
   try {
-    const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
+    console.log("[auth.js] password:", validPassword);
+
+    const userCredentials = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      validPassword
+    );
+
     const user = userCredentials.user;
-    
-    await setDoc(doc(db, "users", user.uid), {
+    const data = {
       email: user.email,
-      fullName: fullName,
-    });
-    
+      firstName: firstName,
+      lastName: lastName,
+    };
+    await setDoc(doc(db, "users", user.uid), data);
+
     return {
       id: user.uid,
-      email: user.email,
-      fullName: fullName,
+      ...data,
     };
   } catch (error) {
+    console.error("Error during registration:", error);
     return {
       code: error.code,
       message: error.message,
     };
   }
-
 }
 
 export const listenToAuthChanges = (auth, setAuthUser) => {
