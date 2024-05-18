@@ -11,7 +11,8 @@ import NavBar from './components/Navbar'
 import Home from './pages/Home'
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Profiles from "./pages/Profiles";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Register/>} />
-      <Route path='/profiles' element={<Profiles/>} />
+      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/profile' element={<Profile/>} />
      </Routes>
      
      <Footer/>

@@ -59,14 +59,14 @@ function NavBar() {
             </Link>
           </div>
           <div className={`nav__links ${isMenuOpen ? "nav__links--open" : ""}`}>
-            <Link className="nav__link" to="/profiles">
+            <Link className="nav__link" to="/dashboard">
               Search
             </Link>
             <a className="nav__link">About us</a>
             <a className="nav__link">Contact us</a>
             {authUser !== null ? (
               <>
-                <Link to='/'>My profile</Link>
+                <Link className="nav__link" to='/profile'>My profile</Link>
                 <Link
                   onClick={handleSignOut}
                   className="wh-button wh-button--primary"
