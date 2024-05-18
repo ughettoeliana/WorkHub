@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Card({ user }) {
   return (
-    <div className="cards">
+    <div>
       <div className="card">
         <div className="img-container">
           <img
@@ -13,8 +13,8 @@ function Card({ user }) {
           />
         </div>
         <div className="userData">
-          <h4 className="userName">{user.fullName}</h4>
-          <p className="userRol">{user.email}</p>
+          <h4 className="userName">{user.firstName} {user.lastName}</h4>
+          {/* <p className="userRol">{user.email}</p> */}
           <p className="userRol">{user.rol}</p>
           <p className="userHourlyRate">{user.hourlyRate}</p>
           <div className="userRatings">
@@ -35,7 +35,8 @@ function Card({ user }) {
 
 Card.propTypes = {
   user: PropTypes.shape({
-    fullName: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     rol: PropTypes.string,
     hourlyRate: PropTypes.string,

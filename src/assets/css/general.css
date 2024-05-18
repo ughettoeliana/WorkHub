@@ -37,3 +37,7 @@ body {
 .wh-fs-xxl {
  font-size: var(--fs-xxl);
 }
+
+.wh-display-none {
+  display: none;
+}
