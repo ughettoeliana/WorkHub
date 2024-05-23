@@ -59,7 +59,7 @@ export default function Register() {
       return;
     }
     await register({ firstName, lastName, email, validPassword });
-    navigate("/", { replace: true });
+    navigate("/login", { replace: true });
   };
 
   return (

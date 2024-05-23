@@ -2,13 +2,14 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  getAuth,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "./firebase";
 
 export async function login({ email, password }) {
   return signInWithEmailAndPassword(auth, email, password)
-    .then((userCredentials) => {
+    .then(async (userCredentials) =>  {
       return {
         id: userCredentials.user.uid,
         email: userCredentials.user.email,
@@ -21,6 +22,26 @@ export async function login({ email, password }) {
       };
     });
 }
+
+
+
+export default async function saveIdTokenToLocalStorage() {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (user) {
+    try {
+      const idToken = await user.getIdToken();
+      localStorage.setItem('firebaseIdToken', idToken);
+    } catch (error) {
+      console.error('Error getting ID token:', error);
+    }
+  } else {
+    console.error('No user is signed in');
+  }
+}
+
+
 
 export async function register({ firstName, lastName, email, validPassword }) {
   try {
@@ -53,8 +74,9 @@ export async function register({ firstName, lastName, email, validPassword }) {
   }
 }
 
+
 export const listenToAuthChanges = (auth, setAuthUser) => {
-  return onAuthStateChanged(auth, (user) => {
+   return onAuthStateChanged(auth, (user) => {
     if (user) {
       setAuthUser(user);
     } else {

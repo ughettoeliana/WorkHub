@@ -25,7 +25,6 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       const usersRef = await getUsers();
-      console.log("usersRef", usersRef);
       setUsers(usersRef);
     }
 

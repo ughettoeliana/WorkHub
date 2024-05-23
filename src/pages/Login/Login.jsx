@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { login } from "../../services/auth";
+import saveIdTokenToLocalStorage, { login } from "../../services/auth";
 import { useState } from "react";
 
 export default function Login() {
@@ -20,6 +20,7 @@ export default function Login() {
     e.preventDefault();
     try {
     await login({email, password});
+    await saveIdTokenToLocalStorage()
     navigate('/', {replace: true})
     } catch (error) {
       console.log(error);

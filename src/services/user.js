@@ -8,10 +8,10 @@ import { db } from "./firebase";
 import { jwtDecode } from "jwt-decode";
 // import { onAuthStateChanged } from "firebase/auth";
 
-let userData = {
-  id: null,
-  email: null,
-};
+// let userData = {
+//   id: null,
+//   email: null,
+// };
 
 export async function getUsers() {
   const usersRef = collection(db, "users");

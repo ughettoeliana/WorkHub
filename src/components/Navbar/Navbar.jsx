@@ -34,11 +34,8 @@ function NavBar() {
 
   useEffect(() => {
     const listen = listenToAuthChanges(auth, setAuthUser);
-
-    return () => {
-      listen();
-    };
-  }, []);
+    console.log('listen:', listen)
+  },[]);
 
   const handleSignOut = () => {
     signOut(auth)
