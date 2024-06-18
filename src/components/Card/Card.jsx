@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Card({ user }) {
   return (
-    <div>
+    <>
       <div className="card">
         <div className="img-container">
           <img
@@ -14,7 +14,6 @@ function Card({ user }) {
         </div>
         <div className="userData">
           <h4 className="userName">{user.firstName} {user.lastName}</h4>
-          {/* <p className="userRol">{user.email}</p> */}
           <p className="userRol">{user.rol}</p>
           <p className="userHourlyRate">{user.hourlyRate}</p>
           <div className="userRatings">
@@ -29,7 +28,43 @@ function Card({ user }) {
           </div>
         </div>
       </div>
-    </div>
+      <div className="card">
+        <div className="img-container">
+          <img
+            src="/src/assets/imgs/woman-picture.avif"
+            className="img"
+            alt="user-profile"
+          />
+        </div>
+        <div className="userData">
+          <h4 className="userName">Julieta Funes</h4>
+          <p className="userRol">Designer</p>
+          <p className="userHourlyRate">$20</p>
+          <div className="userRatings">
+                <p>4.5</p>
+                <img src="/src/assets/svg/star-icon.svg" />
+          </div>
+        </div>
+      </div>
+      <div className="card">
+        <div className="img-container">
+          <img
+            src="/src/assets/imgs/man-taking-selfie.jpg"
+            className="img"
+            alt="user-profile"
+          />
+        </div>
+        <div className="userData">
+          <h4 className="userName">Jose Morales</h4>
+          <p className="userRol">Tailor</p>
+          <p className="userHourlyRate">$18</p>
+          <div className="userRatings">
+                <p>5.0</p>
+                <img src="/src/assets/svg/star-icon.svg" />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
