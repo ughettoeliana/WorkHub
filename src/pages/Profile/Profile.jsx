@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../../services/user";
+import { getUser, updateUserData } from "../../services/user";
 import EditUserForm from "./EditUserForm";
+import "./Profile.css";
+
 
 export default function Profile() {
   const [user, setUser] = useState({});
   const [editMode, setEditMode] = useState(false);
 
   function toggleEditMode() {
-    setEditMode(true);
+    setEditMode((prev) => !prev);
   }
 
-  function handleUpdateUser() {
+  async function handleUpdateUser(updatedUser) {
+    try {
+      await updateUserData(user.id ,updatedUser);
+      setUser(updatedUser);
+      toggleEditMode();
+    } catch (error) {
+      console.error("Failed to update user:", error);
+    }
   }
-  
 
   useEffect(() => {
     async function fetchUserData() {
@@ -23,13 +31,12 @@ export default function Profile() {
     fetchUserData();
   }, []);
 
-
   return (
-    <div>
-      {user.email} :) User Profile
+    <div className="user-profile__body">
+      <h1>Welcome  <span className="wh-color-primary">{user.firstName} {user.lastName}</span></h1>
       <div>
         {!editMode && (
-          <button className="" onClick={toggleEditMode}>
+          <button className="wh-button wh-button--secondary" onClick={toggleEditMode}>
             Edit my profile
           </button>
         )}
