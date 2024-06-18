@@ -34,7 +34,7 @@ function Home() {
   return (
     <div>
       <div className="home__banner">
-        <h1 className="home__header">WorkHub</h1>
+        <h1 className="home__header">workhub</h1>
         <p className="home__subheader ">
           The place where talents and opportunities come together
         </p>
@@ -42,7 +42,7 @@ function Home() {
       </div>
       <section className="home__section">
         <h2 className="home__section-header wh-text-center">
-          How does WorkHub works?
+          How does <span className="wh-color-secondary">workhub</span> works?
         </h2>
         <p className="home__section-description">
           WorkHub is a platform that uses detailed user profiles to match people
