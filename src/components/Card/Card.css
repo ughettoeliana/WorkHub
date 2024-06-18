@@ -42,7 +42,7 @@
 
     .img-container {
       margin-right: var(--lh);
-      max-width: 150px;
+      max-width: 120px;
       
       img {
         width: 100%;
@@ -51,18 +51,24 @@
 
     .userName {
       color: #4a90e2;
+      margin: var(--lh-half) 0;
+    }
+
+    .userRol {
+      margin: var(--lh-half) 0;
     }
 
     .userHourlyRate {
       color: #969696;
-      margin: 0;
+      margin: var(--lh-half) 0;
     }
 
     .userRatings {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 60px;
+      max-width: 50px;
+      margin: 0;
     }
   }
 }
