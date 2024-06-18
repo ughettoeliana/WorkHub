@@ -50,3 +50,18 @@
   background-color: var(--wh-color-tertiary);
 }
 
+.wh-bg-gray-1 {
+  background-color: var(--wh-color-gray-1);
+}
+.wh-bg-gray-2 {
+  background-color: var(--wh-color-gray-2);
+}
+.wh-bg-gray-3 {
+  background-color: var(--wh-color-gray-3);
+}
+.wh-bg-gray-4 {
+  background-color: var(--wh-color-gray-4);
+}
+.wh-bg-gray-5 {
+  background-color: var(--wh-color-gray-5);
+}

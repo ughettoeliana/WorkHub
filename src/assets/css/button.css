@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+.wh-button:hover {
+  cursor: pointer;
+}
+
 .wh-button--primary {
   color: var(--wh-color-gray-5);
   background-color: var(--wh-color-primary);
