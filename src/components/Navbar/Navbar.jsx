@@ -59,8 +59,8 @@ function NavBar() {
             <Link className="nav__link" to="/dashboard">
               Search
             </Link>
-            <a className="nav__link">About us</a>
-            <a className="nav__link">Contact us</a>
+            <Link className="nav__link" to='/about'>About us</Link>
+            <Link className="nav__link" to='/contact-us'>Contact us</Link>
             {authUser !== null ? (
               <>
                 <Link className="nav__link" to='/profile'>My profile</Link>
