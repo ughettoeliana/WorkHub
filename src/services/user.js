@@ -29,8 +29,6 @@ export async function getUser() {
   const userId = idTokenDecoded.user_id;
   const userData = await getUserById(userId);
 
-  console.log("userData", userData);
-
   return userData;
 }
 
@@ -38,15 +36,15 @@ export async function getUserById(id) {
   const refUser = doc(db, `users/${id}`);
   const docSnapshot = await getDoc(refUser);
 
-  console.log("refUser", refUser);
-  console.log("docSnapshot", docSnapshot);
-
   if (docSnapshot.exists()) {
     return {
       id: docSnapshot.id,
       email: docSnapshot.data().email,
       firstName: docSnapshot.data().firstName,
       lastName: docSnapshot.data().lastName,
+      jobTitle: docSnapshot.data().jobTitle,
+      address: docSnapshot.data().address,
+      hourlyRate: docSnapshot.data().hourlyRate,
     };
   } else {
     console.log("No such document!");
@@ -59,8 +57,9 @@ export async function updateUserData(userId, editedUser) {
     await updateDoc(userRef, {
       firstName: editedUser.firstName,
       lastName: editedUser.lastName,
-      rol: editedUser.rol,
+      jobTitle: editedUser.jobTitle,
       address: editedUser.address,
+      hourlyRate: editedUser.hourlyRate,
     });
   } catch (error) {
     console.error("Error al actualizar el usuario:", error);
@@ -78,7 +77,6 @@ export function decodeIdToken() {
 
   try {
     const decodedToken = jwtDecode(idToken);
-    console.log("Decoded token:", decodedToken);
     return decodedToken;
   } catch (error) {
     console.error("Error decoding ID token:", error);
