@@ -1,0 +1,52 @@
+.brand-values__cards {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 2rem auto;
+
+  .brand-values__card {
+    padding: var(--lh);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+  }
+
+  .brand-values__title {
+    text-align: center;
+    font-size: var(--fs-lg);
+  }
+}
+
+/* FAQ Styles */
+.faq-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.faq-section {
+  margin: 40px 0;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
