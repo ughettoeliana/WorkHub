@@ -34,9 +34,14 @@ function Home() {
   return (
     <div>
       <div className="home__banner">
-        <h1 className="home__header">workhub</h1>
-        <p className="home__subheader ">
-          The place where talents and opportunities come together
+        <div className="home__banner-logo">
+          <div className="home__banner-logo-placeholder">
+            <img src='/public/logo-desktop.svg'/>
+          </div>
+          {/* <h1 className="home__header">workhub</h1> */}
+        </div>
+        <p className="home__subheader">
+          The place where <strong>talents</strong> and <strong>opportunities</strong> come together
         </p>
         <a className="wh-button wh-button--primary">Getting started</a>
       </div>
@@ -44,13 +49,20 @@ function Home() {
         <h2 className="home__section-header wh-text-center">
           How does <span className="wh-color-secondary">workhub</span> works?
         </h2>
-        <p className="home__section-description">
-          WorkHub is a platform that uses detailed user profiles to match people
-          with job opportunities or clients. Our top priority is honesty and
-          integrity, so we strive to make every interaction on our platform
-          genuine and trustworthy. Feel confident and safe using our platform,
-          knowing that everything you see is real.
-        </p>
+        <div className="home__section description-container">
+          <p className="home__section description-text">
+            <strong>workhub</strong> is a platform that uses detailed user
+            profiles to match people with job opportunities or clients. Our top
+            priority is honesty and integrity, so we strive to make every
+            interaction on our platform genuine and trustworthy. Feel confident
+            and safe using our platform, knowing that everything you see is
+            real.
+          </p>
+
+          <div className="home__section description-img-container">
+            <img src="/src/assets/imgs/home__tech-people-img.png" />
+          </div>
+        </div>
         <h2 className="wh-text-center wh-fs-xl">Most popular profiles</h2>
 
         <div className="cards">
