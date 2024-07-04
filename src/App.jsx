@@ -14,6 +14,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import About from "./pages/About";
+import UserPublicProfile from "./pages/UserPublicProfile/UserPublicProfile";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/profile' element={<Profile/>} />
       <Route path='/about' element={<About/>} />
+      <Route path='/user-public-profile' element={<UserPublicProfile/>} />
      </Routes>
      
      <Footer/>

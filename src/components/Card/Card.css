@@ -19,6 +19,7 @@
     margin: var(--lh-half) var(--lh-half);
     width: 250px;
     height: 150px; 
+    cursor: pointer;
 
     .img-container {
       margin-right: var(--lh);

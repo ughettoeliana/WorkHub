@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "./Card.css";
 import PropTypes from "prop-types";
 
 function Card({ user }) {
+  const navigate = useNavigate();
+   function handleGoToUserProfile() {
+    navigate('/user-public-profile')
+  } 
   return (
     <>
-      <div className="card">
+      <div className="card" onClick={handleGoToUserProfile}>
         <div className="img-container">
           <img
             src="/src/assets/imgs/woman-picture.avif"
