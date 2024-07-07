@@ -3,7 +3,7 @@
   padding: var(--lh-half) var(--lh);
   border-radius: 18px;
   border: none;
-  font-size: var(--lh);
+  font-size: var(--fs-lg);
   text-align: center;
   text-decoration: none;
 }
