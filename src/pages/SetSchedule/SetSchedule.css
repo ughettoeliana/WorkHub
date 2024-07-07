@@ -1,0 +1,94 @@
+.user__header {
+  max-width: 1000px;
+  margin: var(--lh) auto;
+}
+
+.date-time__container {
+  max-width: 1000px;
+  margin: var(--lh) auto;
+  display: flex;
+  align-items: space-around;
+  gap: 30px;
+}
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.custom-calendar {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+/* Increase width of calendar tiles */
+.custom-calendar .react-calendar__tile {
+  width: 30px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  background-color: white;
+  border: 0.5px solid #ccc;
+  box-sizing: border-box;
+}
+
+.custom-calendar .react-calendar__tile--now {
+  background: #f0f0f0;
+}
+
+.custom-calendar .react-calendar__tile--active {
+  background: #007bff;
+  color: white;
+}
+
+/* Style for calendar numbers */
+.custom-calendar .react-calendar__tile abbr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.custom-calendar .react-calendar__tile--active abbr {
+  color: white;
+  text-align: right;
+}
+
+/* Make the month display bigger */
+.custom-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.custom-calendar .react-calendar__navigation__label {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  padding: var(--lh);
+  text-align: center;
+  background-color: white;
+  border: none;
+}
+
+.custom-calendar .react-calendar__navigation__arrow {
+  background-color: white;
+  border: none;
+  font-size: 2rem; /* Increase the size of the navigation arrows */
+}
+
+.custom-calendar .react-calendar__tile abbr {
+  text-decoration: none;
+}
+
+.button-container {
+  margin-top: var(--lh-3);
+}
