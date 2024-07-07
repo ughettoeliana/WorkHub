@@ -1,0 +1,42 @@
+.payment-option {
+  border: 1px solid #4A90E2;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.payment-option.selected {
+  background-color: #F4F9FF;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4); }
+
+.payment-option label {
+  display: block;
+  margin-top: var(--lh);
+  max-width: 300px;
+}
+
+.payment-title {
+  text-align: center;
+  margin-bottom: var(--lh);
+}
+
+.hidden-radio {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.payment-option.selected .hidden-radio {
+  background-color: #007bff;
+}
+
+

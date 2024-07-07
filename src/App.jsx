@@ -15,6 +15,8 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import About from "./pages/About";
 import UserPublicProfile from "./pages/UserPublicProfile/UserPublicProfile";
+import HireUser from "./pages/HireUser";
+import SetSchedule from "./pages/SetSchedule";
 
 function App() {
 
@@ -28,7 +30,9 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/profile' element={<Profile/>} />
       <Route path='/about' element={<About/>} />
-      <Route path='/user-public-profile' element={<UserPublicProfile/>} />
+      <Route path='/user-public-profile/:userId' element={<UserPublicProfile/>} />
+      <Route path='/user-public-profile/:userId/hireUser' element={<HireUser/>} />
+      <Route path='/user-public-profile/:userId/hireUser/set-schedule' element={<SetSchedule/>} />
      </Routes>
      
      <Footer/>
