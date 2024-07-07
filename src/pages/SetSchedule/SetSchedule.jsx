@@ -12,7 +12,7 @@ function SetSchedule() {
   const navigate = useNavigate();
 
   const handleOnclick = () => {
-    navigate("./set-schedule");
+    navigate("./payment-method");
   };
 
   const handleTimeChange = (e) => {
