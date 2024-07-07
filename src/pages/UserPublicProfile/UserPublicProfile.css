@@ -1,0 +1,140 @@
+p {
+  margin: 0.3rem;
+}
+
+.user__header {
+  border-bottom: 1px solid var(--wh-color-primary);
+  display: flex;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: 1rem auto;
+  align-items: center;
+}
+.user__info {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grey-rounded-border {
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+}
+
+.user__info-card {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  gap: 15px;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.user__additional-details {
+  max-width: 300px;
+  padding: var(--lh);
+  margin-bottom: var(--lh);
+
+  .label-container {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.user__details-container {
+  flex: 1;
+  max-width: 800px;
+}
+
+.background-holder {
+  max-width: 800px;
+  height: 150px;
+  background-image: url("/src/assets/imgs/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px 12px 0 0;
+}
+
+.details-wraper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 var(--lh-2);
+}
+
+.img-container {
+  max-width: 100px;
+
+  img {
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.user__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--lh-half);
+  max-width: 400px;
+  margin: 0 auto;
+
+  p,
+  h2 {
+    margin: 0.5rem 0;
+  }
+
+  .user__location-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user__details-available {
+    background-color: #eefaf7;
+    border-radius: 12px;
+    max-width: 200px;
+    display: flex;
+    gap: 10px;
+    padding: var(--lh-half);
+    margin: var(--lh-half) 0;
+    justify-content: center;
+
+    p {
+      color: #56cdad;
+    }
+  }
+}
+
+.user__about-me {
+  margin: var(--lh) 0;
+  padding: var(--lh-2) var(--lh);
+}
+
+.user__experiences {
+  margin-top: var(--lh-3);
+  border-top: 1px solid #d9d9d9;
+}
+
+.skills-highlight-container {
+  display: flex;
+  gap: 5px;
+
+  .skills-highlight {
+    padding: var(--lh-half);
+    max-width: fit-content;
+    border-radius: 12px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.user__additional-details-container{
+  margin: var(--lh-half) 0;
+
+  .user__additional-details-text {
+    padding: 0.2rem 2.1rem 0.5rem;
+  }
+}

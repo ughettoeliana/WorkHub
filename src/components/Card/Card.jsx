@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 function Card({ user }) {
   const navigate = useNavigate();
-   function handleGoToUserProfile() {
-    navigate('/user-public-profile')
-  } 
+  function handleGoToUserProfile() {
+    navigate(`/user-public-profile/${user.id}`);
+  }
   return (
     <>
       <div className="card" onClick={handleGoToUserProfile}>
@@ -18,18 +18,20 @@ function Card({ user }) {
           />
         </div>
         <div className="userData">
-          <h4 className="userName">{user.firstName} {user.lastName}</h4>
+          <h4 className="userName">
+            {user.firstName} {user.lastName}
+          </h4>
           <p className="userRol">{user.jobTitle}</p>
           {user.hourlyRate ? (
-              <>
-                <p className="userHourlyRate">${user.hourlyRate}</p>
-              </>
-            ) : (
-              ""
-            )}
+            <>
+              <p className="userHourlyRate">${user.hourlyRate}</p>
+            </>
+          ) : (
+            ""
+          )}
           <div className="userRatings">
-                <p>4.5</p>
-                <img src="/src/assets/svg/star-icon.svg" />
+            <p>4.5</p>
+            <img src="/src/assets/svg/star-icon.svg" />
           </div>
           <div className="userRatings">
             {user.ratings ? (
@@ -49,6 +51,7 @@ function Card({ user }) {
 
 Card.propTypes = {
   user: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
