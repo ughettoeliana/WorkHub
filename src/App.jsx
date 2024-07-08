@@ -18,6 +18,8 @@ import UserPublicProfile from "./pages/UserPublicProfile/UserPublicProfile";
 import HireUser from "./pages/HireUser";
 import SetSchedule from "./pages/SetSchedule";
 import PaymentMethod from "./pages/PaymentMethod";
+import HireSuccess from "./pages/HireSuccess";
+import RateProfile from "./pages/RateProfile";
 
 function App() {
   return (
@@ -46,6 +48,11 @@ function App() {
           path="/user-public-profile/:userId/hireUser/set-schedule/payment-method"
           element={<PaymentMethod />}
         />
+        <Route
+          path="/user-public-profile/:userId/hireUser/set-schedule/payment-method/hire-success"
+          element={<HireSuccess />}
+        />
+        <Route path="/profile/rate-profile" element={<RateProfile />} />
       </Routes>
 
       <Footer />

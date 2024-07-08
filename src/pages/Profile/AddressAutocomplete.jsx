@@ -17,7 +17,7 @@ const AddressAutocomplete = ({ onChange, value }) => {
 
   return (
     <input
-      className="login__form-input"
+      className="profile__form-input"
       type="text"
       name="address"
       id="address"
