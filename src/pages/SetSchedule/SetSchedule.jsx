@@ -2,7 +2,7 @@ import Calendar from "react-calendar";
 import "./SetSchedule.css";
 import { useEffect, useState } from "react";
 import { getUserById } from "../../services/user";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 function SetSchedule() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -10,14 +10,22 @@ function SetSchedule() {
   const { userId } = useParams();
   const [time, setTime] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+  const { contractTitle } = location.state || {};
 
+ 
   const handleOnclick = () => {
-    navigate("./payment-method");
+    console.log("Navigating with state:", { selectedDate, time });
+    navigate("./payment-method", {
+      state: {
+        selectedDate,
+        time,
+        contractTitle,
+      },
+    });
   };
-
   const handleTimeChange = (e) => {
     setTime(e.target.value);
-    console.log(e.target.value);
   };
 
   useEffect(() => {
@@ -59,7 +67,6 @@ function SetSchedule() {
             className="contract__input"
             value={time}
             onChange={handleTimeChange}
-            step="1800" 
           />
           <div className="button-container">
             <button
