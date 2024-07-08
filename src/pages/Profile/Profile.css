@@ -12,12 +12,86 @@
       align-items: center;
       gap: 10px;
     }
-    
+
+    .user-profile_aside-section__icons-container.user-icon {
+      background-image: url("/src/assets/svg/icons/user-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.user-icon {
+      background-image: url("/src/assets/svg/icons/user-light-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+    }
+    .user-profile_aside-section__icons-container.interactions {
+      background-image: url("/src/assets/svg/icons/interactions-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.interactions {
+      background-image: url("/src/assets/svg/icons/interactions-icon-light.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+    }
+
+    .user-profile_aside-section__icons-container.favorites {
+      background-image: url("/src/assets/svg/icons/favorites-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.favorites {
+      background-image: url("/src/assets/svg/icons/favorites-light-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+    }
+
+    .user-profile_aside-section__icons-container.notifications {
+      background-image: url("/src/assets/svg/icons/notifications-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.notifications {
+      background-image: url("/src/assets/svg/icons/notifications-light-icon.svg");
+      background-size: 21px;
+      background-repeat: no-repeat;
+    }
+
+    .user-profile_aside-section__icons-container.settings {
+      background-image: url("/src/assets/svg/icons/settings-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.settings {
+      background-image: url("/src/assets/svg/icons/settings-light-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+    }
 
     .user-profile_aside-section__link {
       display: flex;
       gap: 10px;
-      padding: 0 3rem;
+      padding: 0.5rem 3rem;
+      margin: 1rem;
     }
 
     .user-profile_aside-section__link:hover {
@@ -42,22 +116,63 @@
       height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      padding: 1rem;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
   }
 
-
-  .user-profile_data-section{
-  flex: 1; 
+  .user-profile_data-section {
+    flex: 1;
   }
 
-  .user-profile_data-section__title{
+  .user-profile_data-section__title {
     text-align: center;
   }
 
-  .edit-profile_button{
+  .edit-profile_button {
     display: flex;
     align-items: flex-end;
   }
+}
+
+.profile__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1rem; /* Adjust the gap between elements */
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: auto;
+}
+
+.profile__form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__form-container.full-width {
+  grid-column: span 2; /* Make the element span two columns */
+}
+
+.profile__form-label {
+  padding: var(--lh-half);
+}
+
+.profile__form-input {
+  padding: var(--lh-half);
+  margin-bottom: var(--lh);
+  border: solid 1px var(--wh-color-gray-4);
+  border-radius: 8px;
+  font-size: 1rem; /* Increase the size of the input */
+}
+
+.about-me {
+  height: 100px; /* Adjust height for the "About me" input */
+}
+
+.buttons-container {
+  grid-column: span 2; /* Make the buttons container span two columns */
+  display: flex;
+  justify-content: center;
+}
+
+.edit-profile_button {
+  margin-top: 1rem;
 }
