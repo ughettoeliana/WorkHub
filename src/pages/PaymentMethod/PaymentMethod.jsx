@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./PaymentMethod.css";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { getUserById } from "../../services/user";
 import PropTypes from "prop-types";
 
@@ -8,6 +8,8 @@ function PaymentMethod() {
   const [user, setUser] = useState({});
   const { userId } = useParams();
   const [currentStep, setCurrentStep] = useState(1);
+  const location = useLocation();
+  const { selectedDate, time, contractTitle } = location.state || {};
 
   const handleNextStep = () => {
     setCurrentStep(2);
@@ -29,44 +31,54 @@ function PaymentMethod() {
     <div className="payment-method__info">
       <div className="user__header">
         <h1>
-        Hire <strong className="wh-color-primary">{user.firstName} {user.lastName}</strong>
+          Hire{" "}
+          <strong className="wh-color-primary">
+            {user.firstName} {user.lastName}
+          </strong>
         </h1>
       </div>
       <div className="payment-method__container">
         <div className="payment-method__steps-container">
           {currentStep === 1 && <AddressForm onNext={handleNextStep} />}
-          {currentStep === 2 && <BillingForm onPrevious={handlePreviousStep} />}
+          {currentStep === 2 && (
+            <BillingForm
+              onPrevious={handlePreviousStep}
+              selectedDate={selectedDate}
+              time={time}
+              user={user}
+            />
+          )}
         </div>
         <div className="payment-method__user-info">
           <div className="grey-rounded-border">
-          <div className="details-wraper ">
-            <div className="img-container">
-              <img src="/src/assets/imgs/woman-picture.avif" />
+            <div className="details-wraper ">
+              <div className="img-container">
+                <img src="/src/assets/imgs/woman-picture.avif" />
+              </div>
+              <div className="user__details">
+                <h2>
+                  Hire {user.firstName} {user.lastName} for: {contractTitle}
+                </h2>
+              </div>
             </div>
             <div className="user__details">
-              <h2>
-                Hire {user.firstName} {user.lastName} for: `Job Title`
-              </h2>
-            </div>
-          </div>
-          <div className="user__details">
-            <h3>Details</h3>
-            <div className="wh-color-gray-3">
-              <div className="user__details-content">
-                <h4>Hourly rate </h4>
-                {user.hourlyRate ? <p>${user.hourlyRate}</p> : ""}
-              </div>
-              <div className="user__details-content">
-                <h4>Date</h4>
-                {user.hourlyRate ? <p>${user.hourlyRate}</p> : ""}
-              </div>
-              <div className="user__details-content">
-                <h4>Time</h4>
-                {user.hourlyRate ? <p>${user.hourlyRate}</p> : ""}
+              <h3>Details</h3>
+              <div className="wh-color-gray-3">
+                <div className="user__details-content">
+                  <h4>Hourly rate </h4>
+                  {user.hourlyRate ? <p>${user.hourlyRate}</p> : ""}
+                </div>
+                <div className="user__details-content">
+                  <h4>Date</h4>
+                  {selectedDate && new Date(selectedDate).toLocaleDateString()}
+                </div>
+                <div className="user__details-content">
+                  <h4>Time</h4>
+                  {time}
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -167,7 +179,7 @@ const AddressForm = ({ onNext }) => {
   );
 };
 
-const BillingForm = ({ onPrevious }) => {
+const BillingForm = ({ onPrevious, selectedDate, time, user }) => {
   const [formData, setFormData] = useState({
     cardNumber: "",
     firstName: "",
@@ -180,6 +192,8 @@ const BillingForm = ({ onPrevious }) => {
     billingCity: "",
     billingPostalCode: "",
   });
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -203,8 +217,12 @@ const BillingForm = ({ onPrevious }) => {
       formData.billingCity &&
       formData.billingPostalCode
     ) {
-      // Handle form submission (e.g., API call, etc.)
-      alert("Payment form submitted successfully!");
+      navigate("./hire-success", {state: {
+        selectedDate,
+        time,
+        firstName: user.firstName,
+        lastName: user.lastName,
+      }, });
     } else {
       alert("Please fill in all required fields.");
     }
@@ -316,23 +334,26 @@ const BillingForm = ({ onPrevious }) => {
         <button className="wh-button wh-button--primary" type="submit">
           Confirm
         </button>
-      </div>{" "}
+      </div>
     </form>
   );
 };
 
+
 PaymentMethod.propTypes = {
-  onNext: PropTypes.func.isRequired,
-  onPrevious: PropTypes.func.isRequired,
+  onNext: PropTypes.func,
+  onPrevious: PropTypes.func,
 };
 
 AddressForm.propTypes = {
   onNext: PropTypes.func.isRequired,
-  onPrevious: PropTypes.func.isRequired,
 };
+
 BillingForm.propTypes = {
-  onNext: PropTypes.func.isRequired,
   onPrevious: PropTypes.func.isRequired,
+  selectedDate: PropTypes.instanceOf(Date).isRequired,
+  time: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 export default PaymentMethod;
