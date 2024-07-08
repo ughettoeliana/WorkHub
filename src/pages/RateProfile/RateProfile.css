@@ -1,0 +1,61 @@
+.rate-profile_container {
+  text-align: center;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.star {
+  color: #ccc;
+  font-size: 2rem;
+}
+
+.on .star {
+  color: #ffc107;
+}
+
+.off .star {
+  color: #ccc;
+}
+
+.rate-profile_comment-section {
+  margin-top: 5rem;
+}
+
+.rate-profile_textarea {
+  border: 1px solid #d9d9d9d9;
+  border-radius: 10px;
+  width: 400px;
+  height: 100px;
+  padding: var(--lh);
+}
+
+.rate-profile_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.rate-profile_button > button {
+  width: 20%;
+  text-align: center;
+}
+
+.rate-profile__successfully {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
