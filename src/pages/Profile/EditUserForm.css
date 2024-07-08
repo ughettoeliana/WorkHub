@@ -11,16 +11,16 @@
   flex-wrap: wrap;
   gap: 10px;
 
-  .login__form-container {
+  .profile__form-container {
     display: flex;
     flex-direction: column;
   }
 
-  .login__form-label{
+  .profile__form-label{
     flex: 1 1 100%;
   }
 
-  .login__form-input{
+  .profile__form-input{
     flex: 1 1 100%;
     margin-right: var(--lh);
   }

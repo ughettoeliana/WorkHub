@@ -45,6 +45,7 @@ export async function getUserById(id) {
       jobTitle: docSnapshot.data().jobTitle,
       address: docSnapshot.data().address,
       hourlyRate: docSnapshot.data().hourlyRate,
+      aboutMe: docSnapshot.data().aboutMe,
     };
   } else {
     console.log("No such document!");
@@ -54,12 +55,14 @@ export async function getUserById(id) {
 export async function updateUserData(userId, editedUser) {
   try {
     const userRef = doc(db, "users", userId);
+
     await updateDoc(userRef, {
       firstName: editedUser.firstName,
       lastName: editedUser.lastName,
       jobTitle: editedUser.jobTitle,
       address: editedUser.address,
       hourlyRate: editedUser.hourlyRate,
+      aboutMe: editedUser.aboutMe,
     });
   } catch (error) {
     console.error("Error al actualizar el usuario:", error);
