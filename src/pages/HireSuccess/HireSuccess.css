@@ -1,0 +1,25 @@
+.hire-success__container {
+  max-width: 1000px;
+  margin: var(--lh) auto;
+}
+
+.hire-success__card {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: var(--lh);
+  margin: var(--lh-half) auto;
+  gap: 30px;
+}
+
+
+.hire-success__card > div > div {
+  display: flex;
+  justify-content: center;
+  margin: var(--lh-half) auto;
+}
+
+.hire-success__card h2 {
+  margin-top: 0;
+}

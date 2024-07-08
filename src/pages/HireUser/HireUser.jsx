@@ -9,17 +9,25 @@ export default function HireUser() {
   const { userId } = useParams();
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionTitle, setSelectedOptionTitle] = useState("");
+  const [contractTitle, setContractTitle] = useState("");
   const navigate = useNavigate();
+
+  const handleContractTitleChange = (e) => {
+    setContractTitle(e.target.value);
+  };
 
   const handleSelection = (option, title) => {
     setSelectedOption(option);
     setSelectedOptionTitle(title);
   };
 
-  const handleOnclick = () =>{
-    navigate('./set-schedule')
-  }
-
+  const handleOnclick = () => {
+    navigate("./set-schedule", {
+      state: {
+        contractTitle,
+      },
+    });
+  };
 
   useEffect(() => {
     async function fetchUserData() {
@@ -85,8 +93,10 @@ export default function HireUser() {
               type="text"
               name="contractTitle"
               id="contractTitle"
-              value=""
+              value={contractTitle}
+              onChange={handleContractTitleChange}
               placeholder="Add the job contract title"
+              required
             />
           </div>
         </div>
@@ -144,7 +154,12 @@ export default function HireUser() {
           </label>
         </div>
         <div>
-          <button className="wh-button wh-button--primary" onClick={handleOnclick}>Continue</button>
+          <button
+            className="wh-button wh-button--primary"
+            onClick={handleOnclick}
+          >
+            Continue
+          </button>
         </div>
       </div>
     </>
