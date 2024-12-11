@@ -27,6 +27,25 @@
       background-size: 24px;
       background-repeat: no-repeat;
     }
+    .user-profile_aside-section__icons-container.bookedServices {
+      background-image: url("/src/assets/svg/icons/calendar-icon.svg");
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
+    .user-profile_aside-section__link:hover
+      .user-profile_aside-section__icons-container.bookedServices {
+      background-image: url("/src/assets/svg/icons/calendar-light-icon.svg");
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 24px;
+      height: 24px; /* Ensure the element has a height as well */
+    }
+
     .user-profile_aside-section__icons-container.interactions {
       background-image: url("/src/assets/svg/icons/interactions-icon.svg");
       background-size: 24px;
