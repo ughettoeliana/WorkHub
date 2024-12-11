@@ -42,7 +42,7 @@ function RateProfile() {
         >
           <h1>
             Leave your feedback for{" "}
-            <strong className="wh-color-primary">Tomas Alvarez</strong>{" "}
+            <strong className="wh-color-primary">Andrea Perez</strong>{" "}
           </h1>
           <div>
             <h2>Please rate your experience from 1 to 5 stars </h2>

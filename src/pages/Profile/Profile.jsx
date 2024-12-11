@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { getUser, updateUserData } from "../../services/user";
 import EditUserForm from "./EditUserForm";
 import "./Profile.css";
-import Interactions from "./Interactions";
+import BookedServices from "./BookedServices";
 
 export default function Profile() {
   const [user, setUser] = useState({});
   const [editMode, setEditMode] = useState(false);
-  const [selectedSection, setSelectedSection] = useState("profile"); // Default to profile section
+  const [selectedSection, setSelectedSection] = useState("profile");
 
   function toggleEditMode() {
     setEditMode((prev) => !prev);
@@ -54,6 +54,17 @@ export default function Profile() {
               <div className="user-profile_aside-section__icons-container user-icon"></div>
               <div>
                 <p>My profile</p>
+              </div>
+            </div>
+            <div
+              className={`user-profile_aside-section__link ${
+                selectedSection === "bookedServices" ? "active" : ""
+              }`}
+              onClick={() => handleSectionSelect("bookedServices")}
+            >
+              <div className="user-profile_aside-section__icons-container bookedServices"></div>
+              <div className="bookedServices">
+                <p>Booked Services</p>
               </div>
             </div>
             <div
@@ -295,10 +306,19 @@ export default function Profile() {
           </div>
         )}
 
+        {selectedSection === "bookedServices" && (
+          <div>
+            <h1>Booked Services</h1>
+            <BookedServices user={user} />
+          </div>
+        )}
+
         {selectedSection === "interactions" && (
           <div>
             <h1>Interactions</h1>
-            <Interactions user={user} />
+            <p className="wh-color-gray-2">
+              You don&apos;t have any interactions yet
+            </p>
           </div>
         )}
 

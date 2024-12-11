@@ -145,7 +145,7 @@ export default function UserPublicProfile() {
               </p>
             </div>
             <div className="user__about-me grey-rounded-border">
-              <h3>Experiences</h3>
+              <h3>Education</h3>
               <h4 className=" wh-color-primary ">
                 Bachelor’s Degree, University of Buenos Aires, Argentina
               </h4>
