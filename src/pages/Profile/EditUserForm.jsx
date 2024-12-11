@@ -140,14 +140,18 @@ export default function EditUserForm({
               Select a job title
             </option>
             <option value="Software Engineer">Software Engineer</option>
+            <option value="Waitress">Waitress</option>
+            <option value="Cleaning Service">Cleaning Service</option>
             <option value="Data Scientist">Data Scientist</option>
             <option value="Product Manager">Product Manager</option>
             <option value="Marketing Manager">Marketing Manager</option>
             <option value="Sales Representative">Sales Representative</option>
+            <option value="Receptionist">Receptionist</option>
             <option value="Customer Support Specialist">
               Customer Support Specialist
             </option>
             <option value="Graphic Designer">Graphic Designer</option>
+            <option value="Community Manager">Community Manager</option>
             <option value="Content Writer">Content Writer</option>
             <option value="Human Resources Manager">
               Human Resources Manager
