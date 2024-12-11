@@ -16,7 +16,6 @@
   margin: auto;
   max-width: 500px;
   padding: var(--lh) var(--lh-4);
-  align-items: center; 
 }
 
 .login__title {

@@ -6,7 +6,7 @@
   flex: 1 1 100%;
 }
 
-.login__form {
+.profile__form {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
