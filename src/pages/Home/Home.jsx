@@ -36,12 +36,13 @@ function Home() {
       <div className="home__banner">
         <div className="home__banner-logo">
           <div className="home__banner-logo-placeholder">
-            <img src='/public/logo-desktop.svg'/>
+            <img src="/public/logo-desktop.svg" />
           </div>
           {/* <h1 className="home__header">workhub</h1> */}
         </div>
         <p className="home__subheader">
-          The place where <strong>talents</strong> and <strong>opportunities</strong> come together
+          The place where <strong>talents</strong> and{" "}
+          <strong>opportunities</strong> come together
         </p>
         <a className="wh-button wh-button--primary">Getting started</a>
       </div>
@@ -50,13 +51,14 @@ function Home() {
           How does <span className="wh-color-secondary">workhub</span> works?
         </h2>
         <div className="home__section description-container">
-          <p className="home__section description-text">
+          <p className="home__section description-text wh-fs-lg">
             <strong>workhub</strong> is a platform that uses detailed user
-            profiles to match people with job opportunities or clients. Our top
-            priority is honesty and integrity, so we strive to make every
-            interaction on our platform genuine and trustworthy. Feel confident
-            and safe using our platform, knowing that everything you see is
-            real.
+            profiles to match people with{" "}
+            <strong>job opportunities or clients</strong>.{" "}
+            <strong>Our top priority is honesty and integrity</strong>, so we
+            strive to make every interaction on our platform genuine and
+            trustworthy. Feel confident and safe using our platform, knowing
+            that <strong>everything you see is real.</strong>
           </p>
 
           <div className="home__section description-img-container">
