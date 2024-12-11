@@ -45,7 +45,6 @@ export default async function saveIdTokenToLocalStorage() {
 
 export async function register({ firstName, lastName, email, validPassword }) {
   try {
-    console.log("[auth.js] password:", validPassword);
 
     const userCredentials = await createUserWithEmailAndPassword(
       auth,
