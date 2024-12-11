@@ -1,11 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { getUserById } from "../../services/user";
+import { getUser, getUserById } from "../../services/user";
 import { useEffect, useState } from "react";
 import "./HireUser.css";
 import PaymentOption from "./PaymentOption";
 
 export default function HireUser() {
   const [user, setUser] = useState({});
+  const [loggedUser, setLoggedUser] = useState({});
   const { userId } = useParams();
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionTitle, setSelectedOptionTitle] = useState("");
@@ -36,6 +37,16 @@ export default function HireUser() {
     }
     fetchUserData();
   }, [userId]);
+
+  useEffect(() => {
+    async function fetchUserData() {
+      const userData = await getUser();
+      setLoggedUser(userData);
+    }
+
+    fetchUserData();
+  }, []);
+
 
   return (
     <>
@@ -81,8 +92,8 @@ export default function HireUser() {
           <div className="job-info__hiring-team">
             <p>Hiring team</p>
             <select className="hiring-team__select">
-              <option value={user.userId}>
-                {user.firstName} {user.lastName}
+              <option value={loggedUser.userId}>
+                {loggedUser.firstName} {loggedUser.lastName}
               </option>
             </select>
           </div>
