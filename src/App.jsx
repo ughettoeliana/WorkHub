@@ -20,6 +20,7 @@ import SetSchedule from "./pages/SetSchedule";
 import PaymentMethod from "./pages/PaymentMethod";
 import HireSuccess from "./pages/HireSuccess";
 import RateProfile from "./pages/RateProfile";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -30,7 +31,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
         <Route path="/about" element={<About />} />
         <Route
           path="/user-public-profile/:userId"
@@ -52,7 +60,14 @@ function App() {
           path="/user-public-profile/:userId/hireUser/set-schedule/payment-method/hire-success"
           element={<HireSuccess />}
         />
-        <Route path="/profile/rate-profile" element={<RateProfile />} />
+        <Route
+          path="/profile/rate-profile"
+          element={
+            <PrivateRoute>
+              <RateProfile />
+            </PrivateRoute>
+          }
+        />
       </Routes>
 
       <Footer />
@@ -61,3 +76,5 @@ function App() {
 }
 
 export default App;
+
+<PrivateRoute></PrivateRoute>;
