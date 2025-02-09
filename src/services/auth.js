@@ -23,8 +23,6 @@ export async function login({ email, password }) {
     });
 }
 
-
-
 export default async function saveIdTokenToLocalStorage() {
   const auth = getAuth();
   const user = auth.currentUser;
