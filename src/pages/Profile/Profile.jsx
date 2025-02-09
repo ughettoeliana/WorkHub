@@ -3,11 +3,13 @@ import { getUser, updateUserData } from "../../services/user";
 import EditUserForm from "./EditUserForm";
 import "./Profile.css";
 import BookedServices from "./BookedServices";
+import ProfilePhotoModal from "./ProfilePhotoModal";
 
 export default function Profile() {
   const [user, setUser] = useState({});
   const [editMode, setEditMode] = useState(false);
   const [selectedSection, setSelectedSection] = useState("profile");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function toggleEditMode() {
     setEditMode((prev) => !prev);
@@ -37,13 +39,28 @@ export default function Profile() {
     setSelectedSection(section);
   }
 
+  function handleChangeProfilePhoto() {
+    setIsModalOpen(true);
+  }
+
+  function handleSaveNewPhoto(newPhoto) {
+    setUser((prev) => ({ ...prev, profilePhoto: newPhoto })); // Update user photo
+  }
+
   return (
     <div className="user-profile__body">
       <section className="user-profile_aside-section wh-bg-tertiary">
         <div className="user-profile-aside">
           <div className="user-profile__img-container">
-            <img src="/src/assets/imgs/woman-picture.avif" alt="User Avatar" />
+            <img
+              src={user.profilePhoto || "/src/assets/imgs/woman-picture.avif"}
+              alt="User Avatar"
+            />
           </div>
+          <div
+            className="user-profile_aside-section__icons-container edit-avatar-icon"
+            onClick={handleChangeProfilePhoto}
+          ></div>
           <div>
             <div
               className={`user-profile_aside-section__link ${
@@ -347,6 +364,14 @@ export default function Profile() {
           </div>
         )}
       </section>
+      <ProfilePhotoModal
+        isOpen={isModalOpen}
+        currentPhoto={
+          user.profilePhoto || "/src/assets/imgs/woman-picture.avif"
+        }
+        onClose={() => setIsModalOpen(false)}
+        onSave={handleSaveNewPhoto}
+      />
     </div>
   );
 }

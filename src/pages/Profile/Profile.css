@@ -18,7 +18,7 @@
       background-size: 24px;
       background-repeat: no-repeat;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
@@ -27,13 +27,29 @@
       background-size: 24px;
       background-repeat: no-repeat;
     }
+
+    .user-profile_aside-section__icons-container.edit-avatar-icon {
+      background-image: url("/src/assets/svg/icons/edit-icon.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 11em;
+      left: 11em;
+    }
+
+    .user-profile_aside-section__icons-container.edit-avatar-icon:hover {
+      cursor: pointer;
+    }
+
     .user-profile_aside-section__icons-container.bookedServices {
       background-image: url("/src/assets/svg/icons/calendar-icon.svg");
       background-size: 20px;
       background-repeat: no-repeat;
       background-position: center center;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
@@ -43,7 +59,7 @@
       background-repeat: no-repeat;
       background-position: center center;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__icons-container.interactions {
@@ -51,7 +67,7 @@
       background-size: 24px;
       background-repeat: no-repeat;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
@@ -66,7 +82,7 @@
       background-size: 24px;
       background-repeat: no-repeat;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
@@ -81,7 +97,7 @@
       background-size: 24px;
       background-repeat: no-repeat;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
@@ -96,7 +112,7 @@
       background-size: 24px;
       background-repeat: no-repeat;
       width: 24px;
-      height: 24px; /* Ensure the element has a height as well */
+      height: 24px;
     }
 
     .user-profile_aside-section__link:hover
